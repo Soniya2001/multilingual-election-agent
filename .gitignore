@@ -45,3 +45,7 @@ logs/
 dist/
 build/
 .cache/
+
+# Evaluation and scratch files
+project_evaluation.md
+scratch_*.js
