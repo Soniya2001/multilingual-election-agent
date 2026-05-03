@@ -132,7 +132,7 @@ app.get('/api/health', (req, res) => {
 
 if (require.main === module) {
   app.listen(PORT, () => {
-    console.log(`\n🗳️  India Election Agent running → http://localhost:${PORT}`);
+    console.log(`\n🗳️  CivicGuide AI running → http://localhost:${PORT}`);
     console.log(`🤖  Agents: ${Object.keys(AGENT_MAP).join(', ')}`);
     console.log(`🔑  Gemini API: ${process.env.GEMINI_API_KEY ? '✅ Present' : '❌ MISSING'}\n`);
   });
