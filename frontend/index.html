@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>India Election Assistant — AI-Powered Voter Guide</title>
+  <meta name="description" content="Your AI-powered multilingual election guide for India. Get expert answers in English and Tamil about voter registration, polling, eligibility, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ══════════════ SETUP SCREEN ══════════════ -->
+  <div id="setup-screen" class="screen active">
+    <div class="setup-bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <div class="setup-card">
+      <!-- Logo -->
+      <div class="setup-logo">
+        <div class="logo-emblem">🗳️</div>
+        <div class="logo-text">
+          <h1>India Election Assistant</h1>
+          <p class="logo-tagline">Powered by AI · English & தமிழ்</p>
+        </div>
+      </div>
+
+      <p class="setup-subtitle">Your expert guide to India's election process. Ask anything — in your language.</p>
+
+      <!-- Country (fixed) -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="state-select"><i class="fas fa-map-marker-alt"></i> State / UT</label>
+          <select id="state-select">
+            <option value="">Select your state</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu" selected>Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra & Nagar Haveli and Daman & Diu</option>
+            <option value="Delhi">Delhi (NCT)</option>
+            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+            <option value="Ladakh">Ladakh</option>
+            <option value="Lakshadweep">Lakshadweep</option>
+            <option value="Puducherry">Puducherry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="lang-select"><i class="fas fa-globe"></i> Language / மொழி</label>
+          <select id="lang-select">
+            <option value="English">🇬🇧 English</option>
+            <option value="Hindi">🇮🇳 हिंदी (Hindi)</option>
+            <option value="Tamil">🇮🇳 தமிழ் (Tamil)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- First-time voter -->
+      <div class="form-group">
+        <label><i class="fas fa-user-check"></i> <span id="voter-label">First-time Voter?</span></label>
+        <div class="toggle-group" id="voter-toggle" role="group" aria-labelledby="voter-label">
+          <button class="toggle-btn" data-value="true" id="toggle-yes" aria-pressed="false">Yes / ஆம்</button>
+          <button class="toggle-btn active" data-value="false" id="toggle-no" aria-pressed="true">No / இல்லை</button>
+        </div>
+      </div>
+
+      <button id="start-btn" class="start-btn">
+        <span id="start-btn-text">Start My Guide</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+
+      <!-- Agent Pills Preview -->
+      <div class="agents-preview">
+        <p class="agents-label">6 Specialist AI Agents</p>
+        <div class="agent-pills">
+          <span class="pill" style="--c:#4F8EF7">📋 Registration</span>
+          <span class="pill" style="--c:#F7A34F">📅 Calendar</span>
+          <span class="pill" style="--c:#4FC78E">🗳️ Voting</span>
+          <span class="pill" style="--c:#A34FF7">✅ Eligibility</span>
+          <span class="pill" style="--c:#4FF7F0">🏛️ Constituency</span>
+          <span class="pill" style="--c:#F74F4F">📞 Grievance</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ CHAT SCREEN ══════════════ -->
+  <div id="chat-screen" class="screen">
+
+    <!-- Header -->
+    <header id="chat-header">
+      <div class="header-left">
+        <button id="back-btn" title="Back to Setup">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <div class="header-brand">
+          <span class="header-emoji">🗳️</span>
+          <div>
+            <div class="header-title">India Election Assistant</div>
+            <div class="header-subtitle" id="header-subtitle">Tamil Nadu · English</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-controls">
+        <!-- Language pill -->
+        <div class="lang-pill" id="lang-pill">EN</div>
+
+        <!-- Voice Output Toggle -->
+        <button class="ctrl-btn" id="voice-out-btn" title="Toggle Voice Output" aria-pressed="false" aria-label="Toggle voice output">
+          <i class="fas fa-volume-up" aria-hidden="true"></i>
+          <span class="ctrl-label" id="voice-out-label">Voice Off</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Chat Messages -->
+    <main id="chat-box" role="log" aria-live="polite">
+      <!-- Messages injected by JS -->
+    </main>
+
+    <!-- Input Bar -->
+    <footer id="input-bar">
+      <div id="input-wrapper">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Ask about elections in India..."
+          autocomplete="off"
+          aria-label="Ask your election question"
+        />
+        <!-- Mic Button -->
+        <button id="mic-btn" class="icon-btn" title="Voice Input" aria-label="Start voice input" aria-pressed="false">
+          <i class="fas fa-microphone" aria-hidden="true"></i>
+          <span class="mic-ring"></span>
+        </button>
+        <!-- Send Button -->
+        <button id="send-btn" class="icon-btn send" title="Send Message" aria-label="Send Message">
+          <i class="fas fa-paper-plane" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <!-- Recording indicator -->
+      <div id="recording-bar" class="hidden">
+        <span class="rec-dot"></span>
+        <span id="recording-text">Listening...</span>
+        <button id="stop-mic-btn"><i class="fas fa-stop"></i> Stop</button>
+      </div>
+    </footer>
+
+  </div><!-- /chat-screen -->
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>

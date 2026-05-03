@@ -1,0 +1,165 @@
+{
+  "country": "India",
+  "governing_body": "Election Commission of India (ECI)",
+  "eci_website": "https://eci.gov.in",
+  "voter_portal": "https://voters.eci.gov.in",
+  "helpline": "1950",
+  "cvigil_app": "cVIGIL (available on Android & iOS)",
+  "grievance_portal": "https://nationalhelpline.eci.gov.in",
+
+  "registration": {
+    "forms": {
+      "Form 6": "New voter registration for Indian citizens",
+      "Form 6A": "Registration for Overseas/NRI voters",
+      "Form 6B": "Linking Aadhaar with Voter ID",
+      "Form 7": "Objection to inclusion or deletion from voter list",
+      "Form 8": "Correction/update of voter details (name, address, photo)",
+      "Form 8A": "Transposition of entry within same assembly constituency"
+    },
+    "process": [
+      "Visit voters.eci.gov.in or use the Voter Helpline App",
+      "Click on 'New Registration' and fill Form 6",
+      "Upload required documents (photo, age proof, address proof)",
+      "Submit the application and note the reference ID",
+      "Track status using the reference ID on the portal",
+      "Receive Voter ID (EPIC card) by post or download e-EPIC from the portal"
+    ],
+    "eligibility": [
+      "Must be a citizen of India",
+      "Must be 18 years or older on the qualifying date (1st January of the registration year)",
+      "Must be a resident of the polling area where registration is sought",
+      "Must not be of unsound mind",
+      "Must not have been convicted of certain offences"
+    ],
+    "documents_required": [
+      "Passport-size photograph",
+      "Age proof: Birth Certificate, Aadhaar Card, PAN Card, School Leaving Certificate, Passport",
+      "Address proof: Aadhaar Card, Utility bills (electricity/water), Bank passbook, Passport, Ration card"
+    ],
+    "epic_card": "EPIC stands for Elector Photo Identity Card. It is your Voter ID card. You can download e-EPIC (digital version) from voters.eci.gov.in using your mobile number or EPIC number.",
+    "aadhaar_linking": "You can voluntarily link your Aadhaar with your Voter ID by filling Form 6B on the voter portal. This helps deduplicate voter rolls.",
+    "overseas_voters": "NRI voters can register using Form 6A. They vote at the Indian Embassy/Consulate in their country of residence."
+  },
+
+  "election_types": {
+    "Lok Sabha": "General Election — 543 constituencies across India. Held every 5 years. Members are elected to the lower house of Parliament.",
+    "Rajya Sabha": "Upper house of Parliament — 245 seats. Members are elected by State Legislative Assemblies, not directly by voters.",
+    "Vidhan Sabha": "State Legislative Assembly elections. Each state has its own assembly. MLAs are directly elected.",
+    "Local Body Elections": "Panchayat and Municipal elections conducted by State Election Commissions."
+  },
+
+  "election_process": {
+    "announcement": "ECI announces election dates via a Press Conference. The Model Code of Conduct (MCC) comes into force immediately.",
+    "phases": "Lok Sabha elections are held in multiple phases (typically 4-7 phases) across different states on different dates.",
+    "nomination": "Candidates file nomination papers with the Returning Officer. Scrutiny of nominations is done, and candidates can withdraw within a specified period.",
+    "campaign": "Campaigning is allowed after nomination. It ends 48 hours before polling (silent period).",
+    "polling_day": "Voters go to their designated polling booth with valid ID proof. Vote using EVM.",
+    "counting": "Counting of votes happens on the counting day at designated counting centers.",
+    "result": "Winning candidate is declared by the Returning Officer."
+  },
+
+  "voting": {
+    "evm": "EVM stands for Electronic Voting Machine. It consists of a Control Unit (with polling officer) and a Balloting Unit (with voter). Press the button next to your candidate's name and symbol.",
+    "vvpat": "VVPAT (Voter Verified Paper Audit Trail) is attached to EVMs. After pressing the button, a paper slip showing your candidate's name, symbol, and serial number is visible for 7 seconds before being cut and stored.",
+    "process": [
+      "Bring your Voter ID (EPIC), Aadhaar, Passport, or any ECI-approved photo ID to the polling booth",
+      "Find your name in the voter list at the booth (the polling officer will verify)",
+      "Sign/thumbprint in the register",
+      "Get the indelible ink mark on your left index finger",
+      "Proceed to the EVM and press the button next to your preferred candidate",
+      "Observe the VVPAT slip for confirmation",
+      "Exit the booth — your vote is cast!"
+    ],
+    "valid_id_at_booth": [
+      "EPIC (Voter ID card)",
+      "Aadhaar Card",
+      "Passport",
+      "Driving License",
+      "PAN Card",
+      "MNREGA Job Card",
+      "Smart Card issued by RGI under NPR",
+      "Pension document with photograph",
+      "Bank/Post Office Passbook with photo"
+    ],
+    "postal_ballot": "Available for service voters (armed forces, police), persons with disabilities (PwD), voters above 85 years, and COVID-affected voters.",
+    "proxy_voting": "Service voters can appoint a proxy to vote on their behalf in their constituency.",
+    "booth_slip": "A booth slip with your serial number and booth details is distributed by political parties. It is NOT a mandatory document — you still need valid ID."
+  },
+
+  "model_code_of_conduct": {
+    "definition": "MCC is a set of guidelines issued by ECI that political parties and candidates must follow during elections.",
+    "comes_into_force": "Immediately upon announcement of election schedule",
+    "key_rules": [
+      "No new government schemes can be announced by ruling party",
+      "Government machinery cannot be used for election campaigns",
+      "Candidates must not use religion or caste to seek votes",
+      "No hate speech or inflammatory statements",
+      "Campaign ends 48 hours before polling day",
+      "No alcohol distribution on polling day and day before"
+    ]
+  },
+
+  "eligibility_details": {
+    "minimum_age": 18,
+    "qualifying_date": "1st January of the year",
+    "nri_voting": "NRIs can register as overseas electors using Form 6A and vote at their nearest Indian Embassy/Consulate.",
+    "pwd_facilities": [
+      "Accessible polling booths (ramps, wheelchairs)",
+      "Priority queues for PwD voters",
+      "Braille-enabled EVMs",
+      "Escort facility inside polling booth",
+      "Postal ballot option for PwD voters",
+      "PwD voters can call 1950 for help"
+    ],
+    "senior_citizen": "Voters above 85 years of age can opt for postal ballot or home voting facility.",
+    "disqualification_grounds": [
+      "Not a citizen of India",
+      "Below 18 years of age on qualifying date",
+      "Declared of unsound mind by a competent court",
+      "Not a resident of the polling constituency",
+      "Disqualified under any law relating to corrupt practices or election offences"
+    ]
+  },
+
+  "constituencies": {
+    "total_lok_sabha_seats": 543,
+    "total_rajya_sabha_seats": 245,
+    "reserved_seats": "84 seats reserved for SC (Scheduled Castes) and 47 for ST (Scheduled Tribes) in Lok Sabha",
+    "delimitation": "Constituencies are redrawn by the Delimitation Commission based on census data.",
+    "find_constituency": "Visit https://voters.eci.gov.in → 'Know Your Polling Station/Officer' to find your constituency by entering your name or EPIC number.",
+    "tamil_nadu": {
+      "lok_sabha_seats": 39,
+      "rajya_sabha_seats": 18,
+      "vidhan_sabha_seats": 234,
+      "state_capital": "Chennai",
+      "chief_electoral_officer": "CEO Tamil Nadu — https://www.elections.tn.gov.in",
+      "helpline": "1950 (same national helpline)",
+      "key_lok_sabha_constituencies": [
+        "Chennai North", "Chennai South", "Chennai Central",
+        "Coimbatore", "Madurai", "Salem", "Trichy", "Vellore",
+        "Kancheepuram", "Villupuram", "Cuddalore", "Thanjavur",
+        "Tirunelveli", "Thoothukudi", "Erode", "Nilgiris"
+      ]
+    }
+  },
+
+  "grievance": {
+    "national_helpline": "1950 — Available Monday to Saturday, 10 AM to 5 PM",
+    "cvigil": "cVIGIL app — Report MCC violations with photo or video. Download from Google Play or App Store. Reports are resolved within 100 minutes on average.",
+    "online_grievance": "https://nationalhelpline.eci.gov.in — File complaints about voter registration, polling booth issues, etc.",
+    "what_to_report": [
+      "Distribution of money or gifts to voters (bribery)",
+      "Booth capturing or intimidation",
+      "Violation of Model Code of Conduct",
+      "Liquor distribution",
+      "Hate speech or communal propaganda",
+      "Removal or defacement of election symbols",
+      "Fake news or misinformation"
+    ],
+    "eci_social_media": {
+      "twitter": "@ECISVEEP",
+      "facebook": "Election Commission of India"
+    },
+    "state_ceo_tamil_nadu": "Chief Electoral Officer, Tamil Nadu — https://www.elections.tn.gov.in"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "country": "India",
+  "languages": [
+    {
+      "code": "en",
+      "label": "English",
+      "voice": "en-IN-Wavenet-D",
+      "speechLang": "en-IN"
+    },
+    {
+      "code": "ta",
+      "label": "Tamil",
+      "voice": "ta-IN-Wavenet-A",
+      "speechLang": "ta-IN"
+    }
+  ],
+  "agents": [
+    {
+      "id": "registration",
+      "name": "Registration Agent",
+      "tamilName": "பதிவு முகவர்",
+      "icon": "📋",
+      "color": "#4F8EF7"
+    },
+    {
+      "id": "calendar",
+      "name": "Calendar Agent",
+      "tamilName": "காலண்டர் முகவர்",
+      "icon": "📅",
+      "color": "#F7A34F"
+    },
+    {
+      "id": "voting",
+      "name": "Voting Agent",
+      "tamilName": "வாக்களிப்பு முகவர்",
+      "icon": "🗳️",
+      "color": "#4FC78E"
+    },
+    {
+      "id": "eligibility",
+      "name": "Eligibility Agent",
+      "tamilName": "தகுதி முகவர்",
+      "icon": "✅",
+      "color": "#A34FF7"
+    },
+    {
+      "id": "constituency",
+      "name": "Constituency Agent",
+      "tamilName": "தொகுதி முகவர்",
+      "icon": "🏛️",
+      "color": "#4FF7F0"
+    },
+    {
+      "id": "grievance",
+      "name": "Grievance Agent",
+      "tamilName": "குறை முகவர்",
+      "icon": "📞",
+      "color": "#F74F4F"
+    }
+  ]
+}
