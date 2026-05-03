@@ -1,11 +1,5 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
 require('dotenv').config();
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ 
-  model: "gemini-2.0-flash",
-  generationConfig: { responseMimeType: "application/json" }
-});
 
 /**
  * Orchestrator Agent
@@ -32,7 +26,7 @@ User Query: "${userQuery}"
 `;
 
   try {
-    const result = await model.generateContent(prompt);
+    const result = await generateWithFallback(prompt);
     const raw = result.response.text().trim().toLowerCase().replace(/[^a-z]/g, '');
     const validRoutes = ['registration', 'calendar', 'voting', 'eligibility', 'constituency', 'grievance'];
     return validRoutes.includes(raw) ? raw : 'voting';

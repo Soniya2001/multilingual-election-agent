@@ -1,12 +1,7 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
 const electionData = require('../data/electionData.json');
+const { generateWithFallback } = require('../services/geminiService');
 require('dotenv').config();
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ 
-  model: "gemini-2.0-flash",
-  generationConfig: { responseMimeType: "application/json" }
-});
 
 const AGENT_META = {
   id: 'grievance',
@@ -45,7 +40,7 @@ User Query: "${userQuery}"
 `;
 
   try {
-    const result = await model.generateContent(prompt);
+    const result = await generateWithFallback(prompt);
     let raw = result.response.text().trim();
     raw = raw.replace(/```json\n?|\n?```/g, '').trim();
     const parsed = JSON.parse(raw);

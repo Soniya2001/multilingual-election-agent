@@ -1,4 +1,5 @@
 const electionData = require('../data/electionData.json');
+const { generateWithFallback } = require('../services/geminiService');
 
 const getInfo = (intent, context) => {
   const countryData = electionData[context.country.toLowerCase()] || electionData["india"];

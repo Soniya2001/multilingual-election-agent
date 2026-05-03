@@ -7,6 +7,7 @@ CivicGuide AI is a multi-agent AI web application designed to guide users throug
 - **Multilingual Support**: Supports English, Tamil, and Hindi.
 - **Voice Interaction**: Integrated text-to-speech for accessible guidance.
 - **Personalized Flow**: Adapts instructions based on user location and status (e.g., first-time voter).
+- **Error-Resilient Architecture**: Implemented a robust fallback mechanism using Gemini 2.0 Flash to gracefully handle model availability inconsistencies across environments, ensuring uninterrupted agent responses.
 
 ## Tech Stack
 - **Frontend**: Vanilla JS, HTML5, CSS3 (Glassmorphism design).
